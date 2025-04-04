@@ -1,0 +1,196 @@
+*{
+    box-sizing: border-box /* html me paddin or margin ko disturb nhi ktta h */
+}
+body{
+
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+#container{
+
+height:100vh;
+width: 100%;
+background-color: rgb(207, 201, 201);
+}
+
+
+
+#sidenav{
+   margin-top: 0;
+   margin-left: 0;
+    position: fixed;
+    width: 250px;
+    height:100%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(117,86,204,1) 0%, rgba(213,105,167,1) 90% );
+}
+
+#section{
+    height:100vh;
+    position: fixed;
+    width: calc(100% - 250px);
+     background-color: rgb(251, 251, 251);
+     margin-left:250px ;
+     display: flex;
+     
+    
+
+}
+#section #topnev{
+    position: fixed;
+    width: calc(100% - 250px);
+  
+    margin-left:250px;
+    top: 0;
+    left: 0;
+    
+   background-color: #03045e;
+   display: flex;
+   align-items: center;
+    padding: 20px 20px;   /* {top-bottom  laft-right}  */
+     /* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */
+    /* background-image: linear-gradient( 96.5deg,  rgba(39,103,187,1) 10.4%, rgba(16,72,144,1) 87.7% ); */
+}
+
+#manubutton{
+    height: 38px;
+    width: 38px;
+    font-size: 25px;
+    padding: 5px;
+    margin: 5px;
+    transition: 0.3s;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    display: none;
+
+}
+#manubutton:hover{
+
+    background-color: rgb(201, 102, 2);
+    color: white;
+}
+#rigesterbtn{
+   
+    background-color: rgb(201, 102, 2);
+    color: white;
+}
+#brandName{
+    color: rgb(186, 186, 186);
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    
+}
+
+#sidenavmanu{
+display: flex;
+flex-direction: column;
+gap: 8px; 
+padding: 12px;
+
+}
+#sidenavmanu button{
+    border: none;
+    padding: 8px 0;
+    border-radius: 4px;
+    margin-top: 25px;
+}
+
+#sidenavmanu button:hover{
+  cursor: pointer;               /* jab hme mouse le jate h to hand iconke liye */
+  background-color: rgb(201, 102, 2);  
+  transition-duration: 0.2s;
+}
+#content{
+  padding: 80px 40px;
+}
+
+#rigester , #Signup{
+    display: none;
+}
+
+#lebal{
+    font-family: sans-serif;
+}
+
+#card{
+    box-shadow: 0 0 10px 0 #ddd;
+    width: 350px;
+    padding: 24px;
+   
+}
+#card form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 8px;
+}
+#card form input{
+ border: 1px solid;
+ border-radius: 4px;
+ padding: 16px;
+}
+#card form button{
+    border: none;
+    padding: 14px;
+    border-radius:4px ;
+    background-color: darkmagenta;
+    width: fit-content;  /* jitni need hogi btn ko lelega*/
+}
+#card form button:hover{
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+
+@media(max-width : 768px){
+ 
+ #sidenav{
+    width: 0;
+ }
+ #section{
+    width: 100%;
+    margin-left:0px ;
+
+ }
+ #section #topnev{
+    margin-left: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    
+
+ }
+ #section #topnev #toolbar{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+ }
+
+ #manubutton{
+    display: block;
+ }
+ #sidenavmanu{
+     
+    padding: 0px;
+ }
+ #content{
+    padding: 0;
+  }
+#Signinbtn{
+    margin: 0;
+}
+
+#content{
+    padding: 80px;
+    margin-top:25px ;
+}
+#sidenavmanu{
+    padding: 25px;
+}
+} 

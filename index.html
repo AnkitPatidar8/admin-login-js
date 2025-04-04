@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin penel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <div id="container">
+        <div id="sidenav">
+            <div  id="sidenavmanu">
+                    <button id="rigesterbtn" onclick="tab( 'rigesterbtn','Signinbtn', 'rigester', 'Signup')">Rigester</button>
+                    <button id="Signinbtn" onclick="tab('Signinbtn', 'rigesterbtn' ,'Signup' , 'rigester' )">sign in</button>
+
+            </div>
+        </div>       
+            <div id="section">
+                <nav id="topnev">
+                    <div id="toolbar">
+                        <button id="manubutton"onclick="toggle(event)"><i class="fa-solid fa-bars"></i></button>
+                        <h1 id="brandName"> CoddingOtt</h1>
+                    </div>
+                </nav>
+                    <div id="content">
+                        <div id="rigester">
+                            <h1 id="lebal">Register</h1>
+                            <div id="card" class="animate__animated animate__fadeIn animate__slower">
+                                <form name="registerform" onsubmit="registernow(event)" oninput="inputVelidation(this)">
+                                    <input name="fullname" placeholder="Fullname" type ="text"></input>
+                                    <input name="email" placeholder="email" type ="email"></input>
+                                    <input name="password" placeholder="create password" type ="password" ></input>
+                                    <button>Rigester now</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="Signup">
+                            <h1 id="lebal">Sign In</h1>
+                            <div id="card" class="animate__animated animate__fadeIn animate__slower">
+                                <form name="loginform">
+                                    <input name="fullname" placeholder="Fullname" type ="text"></input>
+                                    <input name="mobile" placeholder="mobile number" type ="text"></input>
+                                    <input name="password" placeholder="password" type ="password"></input>
+                                    <button>Signin now</button>
+                                </form>
+                            </div>
+                        </div>
+                             
+                    </div>
+                
+            </div>
+        </div>
+        
+
+             
+    </div>
+        <script src="admin.js"></script>
+</body>
+</html>
